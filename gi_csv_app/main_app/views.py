@@ -11,19 +11,6 @@ class CsvUploadView(APIView):
     def post(self, request, *args, **kwargs):
         file_serializer = FileSerializer(data=request.data)
         
-        # data = [
-        #     {"name": "Jo", "age": 25, "email": "john@example.com"},  # Name < 3 characters
-        #     {"name": "Alice", "age": 17, "email": "alice@example.com"},  # Age < 18
-        #     {"name": "Mike", "age": 30, "email": "mike@example.net"},  # Email not ending with .com
-        #     {"name": "John", "age": 25, "email": "john.doe@example.com"},  # Valid record
-        #     {"name": "Sara", "age": 30, "email": "sara.smith@example.com"}  # Valid record
-        # ]
-
-        # with open('updated_records.csv', mode="w", newline="") as file:
-        #     writer = csv.DictWriter(file, fieldnames=["name", "age", "email"])
-        #     writer.writeheader()
-        #     writer.writerows(data)
-
         if file_serializer.is_valid():
             valid_count = 0
             error_rec = []
