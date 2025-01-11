@@ -21,7 +21,6 @@ class CsvUploadView(APIView):
             file = req_file.read().decode('utf-8').splitlines()
             csv_data = csv.DictReader(file)
             for data in csv_data:
-                print(data)
                 data = {key.lower(): value for key, value in data.items()}
                 user_serializer = UserDataSerializer(data=data)
                 if user_serializer.is_valid():
