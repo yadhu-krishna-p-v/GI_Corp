@@ -6,6 +6,6 @@ class UploadCSVTest(TestCase):
         self.client = APIClient()
 
     def test_valid_csv_upload(self):
-        with open('test_data.csv', 'rb') as file:
+        with open('sample_data.csv', 'rb') as file:
             response = self.client.post('/validate-csv/', {'csv_file': file})
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 201)
