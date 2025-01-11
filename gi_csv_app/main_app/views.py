@@ -9,6 +9,9 @@ from .models import User
 
 class CsvUploadView(APIView):
     def post(self, request, *args, **kwargs):
+        """
+        API to upload a CSV file and validate data
+        """
         file_serializer = FileSerializer(data=request.data)
         
         if file_serializer.is_valid():
@@ -30,5 +33,8 @@ class CsvUploadView(APIView):
         return Response(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
     def delete(self, request):
+        """
+        API to delete all records
+        """
         User.objects.all().delete()
         return Response({"success": "All records deleted"}, status=status.HTTP_204_NO_CONTENT)
