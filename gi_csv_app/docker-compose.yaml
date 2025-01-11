@@ -1,0 +1,30 @@
+services:
+  gi_main_app:
+    container_name: gi-main-app
+    image: gi-main-app
+    restart: always
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - 8002:8000
+    networks:
+      - test-network
+  postgres:
+    container_name: postgres-db
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: main_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432
+    networks:
+      - test-network  
+networks:
+  test-network:
+    driver: bridge
