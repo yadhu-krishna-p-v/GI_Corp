@@ -1,15 +1,26 @@
 **GI Corporation Assessment task**
 
-Csv validation project
+A simple project that processes user data from a CSV
+file.
 
-**Project Deployment**
+---
+## **Features**
+- RESTful API build using Django
 
-Using docker:-
+## **Installation**
+
+### Clone the Repository
+```
+git clone <repository-url>
+cd <repository-folder>
+```
+
+### Using docker:-
 
     `cd gi_csv_app`
 
     `docker-compose -f docker-compose.yaml up -d`
-Without using:-
+### Without using docker:-
 
 	  `cd gi_csv_app`
 
