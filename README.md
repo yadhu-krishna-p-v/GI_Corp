@@ -26,7 +26,7 @@ cd <repository-folder>
 
     `docker exec -it <container_name/id> bash`
 
-   `python manage.py migrate`
+    `python manage.py migrate`
 
 ### Without using docker:-
 
