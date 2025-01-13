@@ -1,0 +1,41 @@
+{
+    "success": "2 records added",
+    "error": [
+        {
+            "data": {
+                "name": "Jo",
+                "age": "25",
+                "email": "john@example.com"
+            },
+            "error": {
+                "name": [
+                    "Name must be at least 3 characters long."
+                ]
+            }
+        },
+        {
+            "data": {
+                "name": "Alice",
+                "age": "17",
+                "email": "alice@example.com"
+            },
+            "error": {
+                "age": [
+                    "Age must be at least 18."
+                ]
+            }
+        },
+        {
+            "data": {
+                "name": "Mike",
+                "age": "30",
+                "email": "mike@example.net"
+            },
+            "error": {
+                "email": [
+                    "Email must end with .com"
+                ]
+            }
+        }
+    ]
+}
