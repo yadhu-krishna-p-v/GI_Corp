@@ -13,6 +13,8 @@ services:
       - 8002:8000
     networks:
       - test-network
+    environment:
+      - DJANGO_SETTINGS_MODULE=gi_csv_app.settings
   postgres:
     container_name: postgres-db
     image: postgres:15

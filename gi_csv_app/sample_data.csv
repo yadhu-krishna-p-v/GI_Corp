@@ -1,4 +1,6 @@
-Name,Age,Email
-Alice Johnson,25,alice.johnson@example.com
-Bob Smith,30,bob.smith@example.com
-Charlie Davis,35,charlie.davis@example.com
+name,age,email
+Jo,25,john@example.com
+Alice,17,alice@example.com
+Mike,30,mike@example.net
+John,25,john.doe@example.com
+Sara,30,sara.smith@example.com
